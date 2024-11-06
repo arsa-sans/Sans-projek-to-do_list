@@ -184,5 +184,5 @@ login_button.pack(pady=5)
 register_button = tk.Button(root, text="Register", command=register)
 register_button.pack(pady=20)
 
-# Menjalankan loop utama Tkinter
+# Menjalankan looping GUI utama tkinter
 root.mainloop()
