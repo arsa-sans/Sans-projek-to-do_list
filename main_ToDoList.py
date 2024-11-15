@@ -53,13 +53,40 @@ class TodoListApp:
         self.search_entry.bind("<KeyRelease>", self.search_tasks)  # Pencarian saat mengetik
 
         # Tombol untuk menambah, mengedit, dan menghapus tugas
-        self.add_button = tk.Button(self.root, text="Tambah Tugas", command=self.add_task, bg='#4717F6', fg='#E7DFDD')
+        self.add_button = tk.Button(self.root, text="Tambah Tugas", command=self.add_task, bg='#4717F6', fg='#E7DFDD',
+                                    font=('Arial', 10),
+                                    activebackground='#A239CA',
+                                    foreground='white',
+                                    highlightbackground="black",
+                                    highlightcolor="green",
+                                    highlightthickness=2,
+                                    justify="center",
+                                    disabledforeground="gray",
+                                    )
         self.add_button.pack(pady=5)
 
-        self.edit_button = tk.Button(self.root, text="Edit Tugas", command=self.edit_task, bg='#4717F6', fg='#E7DFDD')
+        self.edit_button = tk.Button(self.root, text="Edit Tugas", command=self.edit_task, bg='#4717F6', fg='#E7DFDD',
+                                    font=('Arial', 10),
+                                    activebackground='#A239CA',
+                                    foreground='white',
+                                    highlightbackground="black",
+                                    highlightcolor="green",
+                                    highlightthickness=2,
+                                    justify="center",
+                                    disabledforeground="gray",
+                                    )
         self.edit_button.pack(pady=5)
 
-        self.delete_button = tk.Button(self.root, text="Hapus Tugas", command=self.delete_task, bg='#4717F6', fg='#E7DFDD')
+        self.delete_button = tk.Button(self.root, text="Hapus Tugas", command=self.delete_task, bg='#4717F6', fg='#E7DFDD',
+                                        font=('Arial', 10),
+                                        activebackground='#A239CA',
+                                        foreground='white',
+                                        highlightbackground="black",
+                                        highlightcolor="green",
+                                        highlightthickness=2,
+                                        justify="center",
+                                        disabledforeground="gray",
+                                       )
         self.delete_button.pack(pady=5)
 
     # Memuat tugas dari file JSON berdasarkan username
@@ -180,10 +207,28 @@ password_entry = tk.Entry(root, show="*")
 password_entry.pack(pady=5)
 
 # Membuat tombol Login dan Register
-login_button = tk.Button(root, text="Login", command=login, bg='#4717F6', fg='#E7DFDD')
+login_button = tk.Button(root, text="Login", command=login, bg='#4717F6', fg='#E7DFDD', 
+                                font=('Arial', 10),
+                                activebackground='#A239CA',
+                                foreground='white',
+                                highlightbackground="black",
+                                highlightcolor="green",
+                                highlightthickness=2,
+                                justify="center",
+                                disabledforeground="gray",
+                        )
 login_button.pack(pady=20)
 
-register_button = tk.Button(root, text="Register", command=register, bg='#4717F6', fg='#E7DFDD')
+register_button = tk.Button(root, text="Register", command=register, bg='#4717F6', fg='#E7DFDD',
+                            font=('Arial', 10),
+                            activebackground='#A239CA',
+                            foreground='white',
+                            highlightbackground="black",
+                            highlightcolor="green",
+                            highlightthickness=2,
+                            justify="center",
+                            disabledforeground="gray",
+                            )
 register_button.pack()
 
 # Menjalankan looping GUI utama tkinter
