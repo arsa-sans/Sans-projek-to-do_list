@@ -31,12 +31,13 @@ class TodoListApp:
         self.root = root # Window utama tkinter
         self.username = username # Username saat ini
         self.tasks = self.load_tasks() # Memuat data tugas user
+        root.configure(bg='#0E0B16')
 
         # Set title for the window
         self.root.title(f"To-Do List - {self.username}")
 
         # Frame untuk menampilkan daftar tugas
-        ttk.Label(text='List Tugas').pack()
+        tk.Label(text='List Tugas', bg='#0E0B16', fg='#E7DFDD', font=('Arial', 10, 'bold')).pack()
         self.frame = tk.Frame(self.root)
         self.frame.pack(pady=10)
 
@@ -46,19 +47,19 @@ class TodoListApp:
         self.load_tasks_to_listbox()
 
         # Entry untuk pencarian
-        ttk.Label(text='Cari tugas:').pack()
-        self.search_entry = tk.Entry(self.root, width=50)
+        tk.Label(text='Cari judul tugas', bg='#0E0B16', fg='#E7DFDD', font=('Arial', 10, 'bold')).pack()
+        self.search_entry = tk.Entry(self.root)
         self.search_entry.pack(pady=5)
         self.search_entry.bind("<KeyRelease>", self.search_tasks)  # Pencarian saat mengetik
 
         # Tombol untuk menambah, mengedit, dan menghapus tugas
-        self.add_button = tk.Button(self.root, text="Tambah Tugas", command=self.add_task)
+        self.add_button = tk.Button(self.root, text="Tambah Tugas", command=self.add_task, bg='#4717F6', fg='#E7DFDD')
         self.add_button.pack(pady=5)
 
-        self.edit_button = tk.Button(self.root, text="Edit Tugas", command=self.edit_task)
+        self.edit_button = tk.Button(self.root, text="Edit Tugas", command=self.edit_task, bg='#4717F6', fg='#E7DFDD')
         self.edit_button.pack(pady=5)
 
-        self.delete_button = tk.Button(self.root, text="Hapus Tugas", command=self.delete_task)
+        self.delete_button = tk.Button(self.root, text="Hapus Tugas", command=self.delete_task, bg='#4717F6', fg='#E7DFDD')
         self.delete_button.pack(pady=5)
 
     # Memuat tugas dari file JSON berdasarkan username
@@ -161,28 +162,29 @@ def register():
 
 # Membuat jendela utama login
 root = tk.Tk()
+root.configure(bg='#0E0B16')
 root.title("Login Form")
 root.geometry("300x250")
 
 # Membuat label dan entry untuk username dan password
-username_label = tk.Label(root, text="Username:")
+username_label = tk.Label(root, text="Username", bg='#0E0B16', fg='#E7DFDD', font=('Arial', 10, 'bold'))
 username_label.pack(pady=5)
 
 username_entry = tk.Entry(root)
 username_entry.pack(pady=5)
 
-password_label = tk.Label(root, text="Password:")
+password_label = tk.Label(root, text="Password", bg='#0E0B16', fg='#E7DFDD', font=('Arial', 10, 'bold'))
 password_label.pack(pady=5)
 
 password_entry = tk.Entry(root, show="*")
 password_entry.pack(pady=5)
 
 # Membuat tombol Login dan Register
-login_button = tk.Button(root, text="Login", command=login)
-login_button.pack(pady=5)
+login_button = tk.Button(root, text="Login", command=login, bg='#4717F6', fg='#E7DFDD')
+login_button.pack(pady=20)
 
-register_button = tk.Button(root, text="Register", command=register)
-register_button.pack(pady=20)
+register_button = tk.Button(root, text="Register", command=register, bg='#4717F6', fg='#E7DFDD')
+register_button.pack()
 
 # Menjalankan looping GUI utama tkinter
 root.mainloop()
