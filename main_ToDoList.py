@@ -192,6 +192,7 @@ root = tk.Tk()
 root.configure(bg='#0E0B16')
 root.title("Login Form")
 root.geometry("300x250")
+root.resizable(False, False)
 
 # Membuat label dan entry untuk username dan password
 username_label = tk.Label(root, text="Username", bg='#0E0B16', fg='#E7DFDD', font=('Arial', 10, 'bold'))
@@ -204,7 +205,7 @@ password_label = tk.Label(root, text="Password", bg='#0E0B16', fg='#E7DFDD', fon
 password_label.pack(pady=5)
 
 password_entry = tk.Entry(root, show="*")
-password_entry.pack(pady=5)
+password_entry.pack()
 
 # Membuat tombol Login dan Register
 login_button = tk.Button(root, text="Login", command=login, bg='#4717F6', fg='#E7DFDD', 
@@ -217,7 +218,7 @@ login_button = tk.Button(root, text="Login", command=login, bg='#4717F6', fg='#E
                                 justify="center",
                                 disabledforeground="gray",
                         )
-login_button.pack(pady=20)
+login_button.pack(pady=25)
 
 register_button = tk.Button(root, text="Register", command=register, bg='#4717F6', fg='#E7DFDD',
                             font=('Arial', 10),
