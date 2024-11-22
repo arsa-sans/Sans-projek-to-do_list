@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox, simpledialog, ttk
+from tkinter import messagebox, simpledialog
 import os
 import json
 
@@ -37,11 +37,11 @@ class TodoListApp:
         self.root.title(f"To-Do List - {self.username}")
 
         # Frame untuk menampilkan daftar tugas
-        tk.Label(text='List Tugas', bg='#0E0B16', fg='#E7DFDD', font=('Arial', 10, 'bold')).pack()
+        tk.Label(text='List Tugas', bg='#0E0B16', fg='#E7DFDD', font=('Times New Roman', 20, 'bold')).pack(pady=10)
         self.frame = tk.Frame(self.root)
         self.frame.pack(pady=10)
 
-        self.task_listbox = tk.Listbox(self.frame, width=50, height=15)
+        self.task_listbox = tk.Listbox(self.frame, width=50, height=15, bg="#E7DFDD")
         self.task_listbox.pack()
 
         self.load_tasks_to_listbox()
